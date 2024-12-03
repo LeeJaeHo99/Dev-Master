@@ -12,7 +12,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="bot-section flex items-center justify-between w-full pr-9">
-                <section className="calendar w-1/2">study</section>
+                <section className="calendar w-1/2">test</section>
                 <div className="bot-right--section flex items-center justify-between w-1/2">
                     <div className="study border-2">study</div>
                     <div className="test border-2">study</div>
