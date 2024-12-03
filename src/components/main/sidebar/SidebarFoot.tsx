@@ -3,6 +3,7 @@
 import { SidebarFooter } from "@/components/ui/sidebar";
 import { useSidebar } from "@/components/ui/sidebar";
 import Image from 'next/image';
+import UserGrade from './userGrade';
 
 function Profile() {
     return (
@@ -17,7 +18,10 @@ function Profile() {
                 />
             </div>
             <div className="progile-text--wrap">
-                <div className="user-name font-bold">이재호</div>
+                <div className="flex items-center justify-start gap-2 mb-1">
+                    <span className="user-name font-bold">이재호</span>
+                    <UserGrade/>
+                </div>
                 <div className="user-id">ljh2735294@naver.com</div>
             </div>
         </div>
@@ -29,7 +33,6 @@ export default function SidebarFoot() {
         open,
         // openMobile,
     } = useSidebar();
-    console.log("open: ", open);
 
     return (
         <SidebarFooter className={`p-4 ${!open && 'open-false'}`}>

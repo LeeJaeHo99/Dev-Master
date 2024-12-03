@@ -1,6 +1,6 @@
-import SidebarHead from './sidebar-head';
-import SidebarFoot from './sidebar-foot';
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import SidebarHead from './SidebarHead';
+import SidebarFoot from './SidebarFoot';
+import { Home, Search, Settings, Siren, Contact, Users, Megaphone } from "lucide-react";
 
 import {
     Sidebar,
@@ -20,19 +20,34 @@ const items = [
         icon: Home,
     },
     {
+        title: "공지사항",
+        url: "/",
+        icon: Megaphone,
+    },
+    {
         title: "검색",
         url: "/",
         icon: Search,
     },
     {
-        title: "받은 편지함",
+        title: "커뮤니티",
         url: "/",
-        icon: Inbox,
+        icon: Users,
     },
     {
-        title: "캘린더",
+        title: "구인공고",
         url: "/",
-        icon: Calendar,
+        icon: Contact,
+    },
+    // {
+    //     title: "받은 편지함",
+    //     url: "/",
+    //     icon: Inbox,
+    // },
+    {
+        title: "신고하기",
+        url: "/",
+        icon: Siren,
     },
     {
         title: "설정",

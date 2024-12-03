@@ -15,7 +15,6 @@ export default function SidebarHead() {
         open,
         // openMobile,
     } = useSidebar();
-    console.log("open: ", open);
 
     return (
         <SidebarHeader className={`${!open && "open-false"}`}>
