@@ -1,8 +1,8 @@
 "use client";
 
 import { Crown } from "lucide-react";
-import { useSidebar } from "@/components/ui/sidebar";
-import { SidebarHeader } from "@/components/ui/sidebar";
+import { useSidebar } from "@/components/ui/shadcn/sidebar";
+import { SidebarHeader } from "@/components/ui/shadcn/sidebar";
 
 function Logo(){
     return(
