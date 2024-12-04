@@ -1,22 +1,14 @@
 'use client';
 
-import { SidebarFooter } from "@/components/ui/sidebar";
-import { useSidebar } from "@/components/ui/sidebar";
-import Image from 'next/image';
-import UserGrade from './userGrade';
+import { SidebarFooter } from "@/components/ui/shadcn/sidebar";
+import { useSidebar } from "@/components/ui/shadcn/sidebar";
+import UserGrade from '@/components/ui/userGrade';
+import UserImg from '../../ui/userImg';
 
 function Profile() {
     return (
         <div className="profile-wrap flex items-center gap-3">
-            <div className="profile-img--wrap">
-                <Image
-                    className="rounded-md object-cover"
-                    src={'/images/profile.jpeg'}
-                    width={40}
-                    height={40}
-                    alt='profile-img'
-                />
-            </div>
+            <UserImg/>
             <div className="progile-text--wrap">
                 <div className="flex items-center justify-start gap-2 mb-1">
                     <span className="user-name font-bold">이재호</span>
