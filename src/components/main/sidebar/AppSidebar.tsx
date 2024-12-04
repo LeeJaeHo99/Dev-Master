@@ -1,6 +1,6 @@
 import SidebarHead from './SidebarHead';
 import SidebarFoot from './SidebarFoot';
-import { Home, Search, Settings, Siren, Contact, Users, Megaphone } from "lucide-react";
+import { Home, Search, Settings, Siren, Contact, Users, Megaphone, Brush, Code2, Pencil } from "lucide-react";
 
 import {
     Sidebar,
@@ -21,13 +21,28 @@ const items = [
     },
     {
         title: "공지사항",
-        url: "/",
+        url: "/notice",
         icon: Megaphone,
     },
     {
         title: "검색",
         url: "/",
         icon: Search,
+    },
+    {
+        title: "공부",
+        url: "/",
+        icon: Code2,
+    },
+    {
+        title: "테스트",
+        url: "/",
+        icon: Pencil,
+    },
+    {
+        title: "CSS 연습",
+        url: "/practice_css",
+        icon: Brush,
     },
     {
         title: "커뮤니티",
