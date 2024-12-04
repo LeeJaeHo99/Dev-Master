@@ -1,14 +1,9 @@
 "use client";
 
-import { Crown } from "lucide-react";
 import { useSidebar } from "@/components/ui/shadcn/sidebar";
 import { SidebarHeader } from "@/components/ui/shadcn/sidebar";
+import Logo from '../../ui/Logo';
 
-function Logo(){
-    return(
-        <Crown width={20} height={20} color="white"/>
-    );
-}
 
 export default function SidebarHead() {
     const {
@@ -21,9 +16,7 @@ export default function SidebarHead() {
             <div
                 className={`logo-wrap flex items-center justify-start gap-2 p-2 `}
             >
-                <div className="icon-wrap bg-mainColor p-[5px] rounded-sm">
-                    <Logo/>
-                </div>
+                <Logo/>
                 <span className="text-mainColor text-lg font-semibold">
                     Dev Master
                 </span>
