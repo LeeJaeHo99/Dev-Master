@@ -82,11 +82,20 @@
 }
 
 @layer components{
+    .inner{
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        margin: auto;
+    }
     .open-false[data-sidebar=header]{
         padding-bottom: 0 !important;
     }
     .open-false[data-sidebar=footer]{
         padding: 10px !important;
+    }
+    span.open-false{
+        display: none;
     }
     .open-false .logo-wrap{
         align-items: center;

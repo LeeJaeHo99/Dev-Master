@@ -1,7 +1,8 @@
 import SidebarHead from './SidebarHead';
 import SidebarFoot from './SidebarFoot';
-import { Home, Search, Settings, Siren, Contact, Users, Megaphone, Brush, Code2, Pencil } from "lucide-react";
+import { Home, Search, Settings, Siren, Contact, Users, Megaphone, Code2, Pencil } from "lucide-react";
 
+import AccMenu from './AccMenu';
 import {
     Sidebar,
     SidebarContent,
@@ -13,7 +14,7 @@ import {
 } from "@/components/ui/shadcn/sidebar";
 
 // Menu items.
-const items = [
+const items1 = [
     {
         title: "홈",
         url: "/",
@@ -39,11 +40,9 @@ const items = [
         url: "/",
         icon: Pencil,
     },
-    {
-        title: "CSS 연습",
-        url: "/practice_css",
-        icon: Brush,
-    },
+];
+
+const items2 = [
     {
         title: "커뮤니티",
         url: "/",
@@ -79,7 +78,18 @@ export function AppSidebar() {
                 <SidebarGroup>
                     <SidebarGroupContent>
                         <SidebarMenu>
-                            {items.map((item) => (
+                            {items1.map((item) => (
+                                <SidebarMenuItem key={item.title}>
+                                    <SidebarMenuButton asChild>
+                                        <a href={item.url}>
+                                            <item.icon />
+                                            <span>{item.title}</span>
+                                        </a>
+                                    </SidebarMenuButton>
+                                </SidebarMenuItem>
+                            ))}
+                            <AccMenu/>
+                            {items2.map((item) => (
                                 <SidebarMenuItem key={item.title}>
                                     <SidebarMenuButton asChild>
                                         <a href={item.url}>
