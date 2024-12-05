@@ -1,5 +1,5 @@
-import FlexEl from '@/components/practice/FlexEl';
-import FlexStyle from '@/components/practice/FlexStyle';
+import FlexEl from '@/components/practice/flex/FlexEl';
+import FlexStyle from '@/components/practice/flex/FlexStyle';
 
 export default function PracticeFlex() {
     return (
