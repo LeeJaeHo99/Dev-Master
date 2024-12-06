@@ -1,17 +1,15 @@
-"use client";
-
 type PracticeBoxProps = {
-    shrinkNum: number;
-    growNum: number;
+    width: number;
+    height: number;
 };
 
-export default function PracticeBox({ shrinkNum, growNum }: PracticeBoxProps) {
+export default function PracticeStyleBox({ width, height }: PracticeBoxProps) {
+
     return (
         <div
             className={`
                 flex items-center justify-center 
-                shrink-${shrinkNum} grow-${growNum} 
-                w-40 h-24 
+                w-${width} h-${height} 
                 rounded-lg bg-slate-400 
                 text-2xl font-bold text-white`}
         >

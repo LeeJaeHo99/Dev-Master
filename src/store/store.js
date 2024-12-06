@@ -66,6 +66,30 @@ let grow = createSlice({
 });
 export let { setGrow } = grow.actions;
 
+let width = createSlice({
+    name: 'width',
+    initialState: 40,
+    reducers: {
+        setWidth(state, action) {
+            return action.payload;
+        }
+    },
+});
+export let { setWidth } = width.actions;
+
+let height = createSlice({
+    name: 'height',
+    initialState: 24,
+    reducers: {
+        setHeight(state, action) {
+            return action.payload;
+        }
+    },
+});
+export let { setHeight } = height.actions;
+
+
+
 export default configureStore({
     reducer: {
         items: items.reducer,
@@ -74,5 +98,7 @@ export default configureStore({
         direction: direction.reducer,
         shrink: shrink.reducer,
         grow: grow.reducer,
+        width: width.reducer,
+        height: height.reducer,
     }
 });

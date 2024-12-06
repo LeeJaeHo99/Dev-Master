@@ -14,9 +14,9 @@ export default function FlexEl(){
 
     return(
         <div className={`flex items-${items} justify-${justify} gap-${gap} flex-${direction} h-full`}>
-            <PracticeBox display={'box'} shrinkNum={shrink[0]} growNum={grow[0]}/>
-            <PracticeBox display={'box'} shrinkNum={shrink[1]} growNum={grow[1]}/>
-            <PracticeBox display={'box'} shrinkNum={shrink[2]} growNum={grow[2]}/>
+            <PracticeBox shrinkNum={shrink[0]} growNum={grow[0]}/>
+            <PracticeBox shrinkNum={shrink[1]} growNum={grow[1]}/>
+            <PracticeBox shrinkNum={shrink[2]} growNum={grow[2]}/>
         </div>
     );
 }
