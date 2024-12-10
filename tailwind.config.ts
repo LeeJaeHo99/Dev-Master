@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-	  mode: 'jit', // JIT 모드 활성화
+    mode: "jit", // JIT 모드 활성화
     darkMode: ["class"],
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,6 +10,9 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            boxShadow: {
+                common: "0px 0px 30px 0px #00000090",
+            },
             colors: {
                 mainColor: "#87a2ff",
                 background: "hsl(var(--background))",

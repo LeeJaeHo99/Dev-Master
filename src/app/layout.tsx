@@ -5,6 +5,7 @@ import { AppSidebar } from "@/components/main/sidebar/AppSidebar";
 import Header from "@/components/main/header/Header";
 import Footer from "../components/main/footer/Footer";
 import ReduxProvider from "@/store/ReduxProvider";
+import SearchBar from '../components/ui/SearchBar';
 
 export const metadata: Metadata = {
     title: "Dev Master",
@@ -18,6 +19,7 @@ export default function RootLayout({
         <html lang="ko">
             <ReduxProvider>
                 <body>
+                    <SearchBar/>
                     <SidebarProvider>
                         <AppSidebar />
                         <main className="flex justify-between flex-col w-full">
