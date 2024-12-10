@@ -35,23 +35,19 @@ export default function NoticeTable() {
             <TableCaption></TableCaption>
             <TableHeader>
                 <TableRow>
-                    <TableHead className="w-[100px]">번호</TableHead>
-                    <TableHead className="w-[120px]">구분</TableHead>
+                    <TableHead className="w-[80px] text-center">번호</TableHead>
+                    <TableHead className="w-[80px] text-center">구분</TableHead>
                     <TableHead>내용</TableHead>
-                    <TableHead className="w-[120px] text-right">
-                        작성일자
-                    </TableHead>
-                    <TableHead className="w-[120px] text-right">
-                        작성자
-                    </TableHead>
+                    <TableHead className="w-[120px] text-right">작성일자</TableHead>
+                    <TableHead className="w-[120px] text-right">작성자</TableHead>
                 </TableRow>
             </TableHeader>
             <TableBody>
                 {mockTableData.map((data, i) => {
                     return (
                         <TableRow className="h-12" key={i}>
-                            <TableCell className="font-medium">{i + 1}</TableCell>
-                            <TableCell>{data.sort}</TableCell>
+                            <TableCell className="w-[80px] font-medium text-center">{i + 1}</TableCell>
+                            <TableCell className="w-[80px] text-center">{data.sort}</TableCell>
                             <TableCell>{data.text}</TableCell>
                             <TableCell className="text-right">{data.date}</TableCell>
                             <TableCell className="text-right">{data.writer}</TableCell>
