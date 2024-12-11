@@ -87,8 +87,19 @@ let height = createSlice({
     },
 });
 export let { setHeight } = height.actions;
+//css 연습 PAGE
 
 
+let displayNone = createSlice({
+    name: 'displayNone',
+    initialState: false,
+    reducers: {
+        setDisplay(stae, action){
+            return action.payload;
+        }
+    }
+});
+export let { setDisplay } = displayNone.actions;
 
 export default configureStore({
     reducer: {
@@ -100,5 +111,6 @@ export default configureStore({
         grow: grow.reducer,
         width: width.reducer,
         height: height.reducer,
+        displayNone: displayNone.reducer,
     }
 });

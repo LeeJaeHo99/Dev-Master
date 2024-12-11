@@ -1,7 +1,8 @@
 import SidebarHead from './SidebarHead';
 import SidebarFoot from './SidebarFoot';
-import { Home, Search, Settings, Siren, Contact, Users, Megaphone, Code2, Pencil } from "lucide-react";
+import { Home, Settings, Siren, Contact, Users, Megaphone, Code2, Pencil } from "lucide-react";
 
+import SearchMenu from './SidebarSearch';
 import AccMenu from './AccMenu';
 import {
     Sidebar,
@@ -25,11 +26,9 @@ const items1 = [
         url: "/notice",
         icon: Megaphone,
     },
-    {
-        title: "검색",
-        url: "/",
-        icon: Search,
-    },
+];
+
+const items2 = [
     {
         title: "공부",
         url: "/",
@@ -40,9 +39,8 @@ const items1 = [
         url: "/",
         icon: Pencil,
     },
-];
-
-const items2 = [
+]
+const items3 = [
     {
         title: "커뮤니티",
         url: "/",
@@ -88,8 +86,19 @@ export function AppSidebar() {
                                     </SidebarMenuButton>
                                 </SidebarMenuItem>
                             ))}
-                            <AccMenu/>
+                            <SearchMenu/>
                             {items2.map((item) => (
+                                <SidebarMenuItem key={item.title}>
+                                    <SidebarMenuButton asChild>
+                                        <a href={item.url}>
+                                            <item.icon />
+                                            <span>{item.title}</span>
+                                        </a>
+                                    </SidebarMenuButton>
+                                </SidebarMenuItem>
+                            ))}
+                            <AccMenu/>
+                            {items3.map((item) => (
                                 <SidebarMenuItem key={item.title}>
                                     <SidebarMenuButton asChild>
                                         <a href={item.url}>
