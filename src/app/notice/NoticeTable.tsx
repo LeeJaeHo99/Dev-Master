@@ -1,3 +1,4 @@
+import { mockTableData } from '../../mock/mock';
 import {
     Table,
     TableBody,
@@ -7,27 +8,6 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/shadcn/table";
-
-interface tableData {
-    sort: string;
-    text: string;
-    date: string;
-    writer: string;
-}
-const mockTableData: tableData[] = [
-    {
-        sort: "긴급",
-        text: "안녕하세요 운영자 입니다.",
-        date: "2019-05-19",
-        writer: "운영자",
-    },
-    {
-        sort: "공지",
-        text: "안녕하세요 운영자 입니다할렐루야.",
-        date: "2019-05-19",
-        writer: "운영자",
-    },
-];
 
 export default function NoticeTable() {
     return (

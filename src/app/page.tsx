@@ -1,4 +1,5 @@
 import CalendarComponent from '@/components/main/section/calendar-section/Calendar-component';
+import GoalComponent from '../components/main/section/goal-section/GoalComponent';
 
 export default function Home() {
     return (
@@ -7,12 +8,20 @@ export default function Home() {
                 <section className="calendar-section rounded-xl bg-muted/50">
                     <CalendarComponent/>
                 </section>
-                <section className="study-section rounded-xl bg-muted/50"></section>
-                <section className="test-section rounded-xl bg-muted/50"></section>
+                <section className="goal-section rounded-xl bg-muted/50">
+                    <GoalComponent/>
+                </section>
+                <section className="announce-section rounded-xl bg-muted/50">
+                
+                </section>
             </div>
             <div className="grid auto-rows-min gap-4 md:grid-cols-2">
-                <section className="announce-section aspect-video rounded-xl bg-muted/50"></section>
-                <section className="notice-section aspect-video rounded-xl bg-muted/50"></section>
+                <section className="community-section aspect-video rounded-xl bg-muted/50">
+                
+                </section>
+                <section className="study-section aspect-video rounded-xl bg-muted/50">
+                
+                </section>
             </div>
         </div>
     );

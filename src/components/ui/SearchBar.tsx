@@ -16,7 +16,7 @@ function SearchBarComponent({displayNone}) {
                 placeholder="검색어를 입력해주세요."
                 autoFocus
             />
-            <div className="absolute top-[8px] right-0 w-7 h-7 bg-transparent rounded-full cursor-pointer" onClick={() => {dispatch(setDisplay(!displayNone))}}>
+            <div className="absolute top-[8px] right-0 w-7 h-7 bg-transparent rounded-full opacity-50 cursor-pointer" onClick={() => {dispatch(setDisplay(!displayNone))}}>
                 <X width={18} height={18} color="white"/>
             </div>
         </div>
