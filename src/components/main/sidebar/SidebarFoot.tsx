@@ -10,7 +10,7 @@ function Profile() {
         <div className="profile-wrap flex items-center gap-3">
             <UserImg/>
             <div className="progile-text--wrap">
-                <div className="flex items-center justify-start gap-2 mb-1">
+                <div className="flex items-center justify-start gap-4 mb-1">
                     <span className="user-name font-bold">이재호</span>
                     <UserGrade/>
                 </div>

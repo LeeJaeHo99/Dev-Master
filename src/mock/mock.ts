@@ -84,7 +84,7 @@ export const mockStudyData: studyDataType[] = [
     },
     {
         subject: 'JS', 
-        progress: 66,
+        progress: 80,
     },
     {
         subject: 'TS', 
@@ -92,10 +92,10 @@ export const mockStudyData: studyDataType[] = [
     },
     {
         subject: 'React', 
-        progress: 66,
+        progress: 75,
     },
     {
         subject: 'NextJS', 
-        progress: 66,
+        progress: 70,
     },
 ]
