@@ -8,7 +8,7 @@ export type clickCss = {
 
 export interface tableData {
     sort: string;
-    text: string;
+    title: string;
     date: string;
     writer: string;
 }

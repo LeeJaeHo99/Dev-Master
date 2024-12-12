@@ -5,6 +5,7 @@ import CommunityComponent from '@/components/main/section/community-section/Comm
 import NoticeComponent from '@/components/main/section/notice-section/NoticeComponent';
 import StudyComponent from '../components/main/section/study-section/StudyComponent';
 import TestComponent from '../components/main/section/test-section/TestComponent';
+import ChartComponent from '../components/main/section/chart-section/ChartComponent';
 
 export default function Home() {
     return (
@@ -24,8 +25,8 @@ export default function Home() {
                 <section className="announce-section rounded-xl bg-muted/50">
                     <AnnounceComponent/>
                 </section>
-                <section className="community-section aspect-video rounded-xl bg-muted/50">
-                    <CommunityComponent/>
+                <section className="chart-section aspect-video rounded-xl bg-muted/50">
+                    <ChartComponent/>
                 </section>
                 <section className="study-section aspect-video rounded-xl bg-muted/50">
                     <StudyComponent/>

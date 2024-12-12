@@ -17,10 +17,9 @@ export default function UserGrade(){
             color: 'purple'
         },
     ];
-
     return(
-        <div className={`user-grade p-1 px-2 bg-${grade[3].color}-300 rounded-sm text-xs font-semibold text-white`}>
-            {grade[3].text}
+        <div className={`user-grade p-1 px-2 bg-${grade[1].color}-300 rounded-sm text-xs font-semibold text-white`}>
+            {grade[1].text}
         </div>
     );
 }

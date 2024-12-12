@@ -39,3 +39,36 @@ export const mockGoalData: string[] = [
     'NextJs 마스터',
     'JavaScript 마스터',
 ]
+
+export const mockAnnounceData: {date: string, company: string, text: string}[] = [
+    {
+        date: '2024-12-28',
+        company: '카카오',
+        text: '프론트엔드 공개채용',
+    },
+    {
+        date: '2024-12-28',
+        company: '카카오',
+        text: '프론트엔드 공개채용',
+    },
+    {
+        date: '2024-12-28',
+        company: '카카오',
+        text: '프론트엔드 공개채용',
+    },
+    {
+        date: '2024-12-28',
+        company: '카카오',
+        text: '프론트엔드 공개채용',
+    },
+    {
+        date: '2024-12-28',
+        company: '카카오',
+        text: '프론트엔드 공개채용',
+    },
+    {
+        date: '2024-12-28',
+        company: '쿠팡',
+        text: '프론트엔드 공개채용',
+    },
+]
