@@ -12,3 +12,8 @@ export interface tableData {
     date: string;
     writer: string;
 }
+
+export interface studyDataType{
+    subject: string,
+    progress: number,
+}
