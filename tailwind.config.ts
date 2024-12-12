@@ -15,6 +15,15 @@ const config: Config = {
             },
             colors: {
                 mainColor: "#87a2ff",
+                mainColor90: "#87a2ff90",
+                mainColor80: "#87a2ff80",
+                mainColor70: "#87a2ff70",
+                mainColor60: "#87a2ff60",
+                mainColor50: "#87a2ff50",
+                mainColor40: "#87a2ff40",
+                mainColor30: "#87a2ff30",
+                mainColor20: "#87a2ff20",
+                mainColor10: "#87a2ff10",
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
                 card: {

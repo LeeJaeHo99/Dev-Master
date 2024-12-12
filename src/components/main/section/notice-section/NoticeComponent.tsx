@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ViewMoreBtn from '../../../ui/ViewMoreBtn';
 import { mockTableData } from '../../../../mock/mock';
 import {
     Table,
@@ -46,7 +47,10 @@ function NoticeComponentTable(){
 export default function NoticeComponent() {
     return (
         <div className="p-5">
-            <h3 className="mb-4 text-xl font-semibold">📢 공지사항</h3>
+            <div className='flex items-start justify-between'>
+                <h3 className="mb-4 text-xl font-semibold">📢 공지사항</h3>
+                <ViewMoreBtn link={''}/>
+            </div>
             <NoticeComponentTable/>
         </div>
     );

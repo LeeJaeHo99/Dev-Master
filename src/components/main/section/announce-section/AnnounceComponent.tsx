@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ViewMoreBtn from '../../../ui/ViewMoreBtn';
 import { mockAnnounceData } from "../../../../mock/mock";
 import {
     Table,
@@ -43,7 +44,10 @@ function MainAnnouncTable() {
 export default function AnnounceComponent() {
     return (
         <div className="p-8">
-            <h3 className="mb-4 text-2xl font-semibold">💼 공고</h3>
+            <div className='flex items-start justify-between'>
+                <h3 className="mb-4 text-2xl font-semibold">💼 공고</h3>
+                <ViewMoreBtn link={''}/>
+            </div>
             <MainAnnouncTable/>
         </div>
     );
