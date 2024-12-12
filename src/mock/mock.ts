@@ -3,13 +3,31 @@ import { tableData } from '../types/types';
 export const mockTableData: tableData[] = [
     {
         sort: "긴급",
-        text: "안녕하세요 운영자 입니다.",
+        title: "안녕하세요 운영자 입니다.",
         date: "2019-05-19",
         writer: "운영자",
     },
     {
         sort: "공지",
-        text: "안녕하세요 운영자 입니다할렐루야.",
+        title: "안녕하세요 운영자 입니다할렐루야.",
+        date: "2019-05-19",
+        writer: "운영자",
+    },
+    {
+        sort: "공지",
+        title: "똥먹어라.",
+        date: "2019-05-19",
+        writer: "운영자",
+    },
+    {
+        sort: "공지",
+        title: "똥먹어라똥먹어라",
+        date: "2019-05-19",
+        writer: "운영자",
+    },
+    {
+        sort: "공지",
+        title: "똥먹어라똥먹어라똥먹어라",
         date: "2019-05-19",
         writer: "운영자",
     },

@@ -1,11 +1,4 @@
-interface stylePraProps{
-    clickSetHeight: object,
-    RadioGroup: object,
-    RadioGroupItem: object,
-    Label: object,
-}
-
-export default function StyleHeight({clickSetHeight, RadioGroup, RadioGroupItem, Label}): stylePraProps {
+export default function StyleHeight({clickSetHeight, RadioGroup, RadioGroupItem, Label}) {
     return (
         <RadioGroup defaultValue="160">
             <div className="mb-2 text-xl font-bold">Height</div>
