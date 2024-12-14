@@ -6,7 +6,7 @@ import GapLine from '../../ui/GapLine';
 
 export default function Header() {
     return (
-        <header className="flex items-center justify-between gap-10 w-full h-auto p-2 pr-9 pl-2 border-b-[1px]">
+        <header className="flex items-center justify-between gap-10 sticky top-0 z-[999] w-full h-auto p-2 pr-9 pl-2 bg-white border-b-[1px]">
             <div className="flex items-center justify-center gap-4">
                 <SidebarTrigger className="justify-end gap-0"/>
                 <GapLine/>
