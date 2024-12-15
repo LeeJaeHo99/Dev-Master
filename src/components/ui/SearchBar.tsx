@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, X } from "lucide-react";
+import { Search } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { setDisplay } from "@/store/store";
 import { useRouter } from "next/navigation";
@@ -18,7 +18,8 @@ function SearchBarComponent({displayNone}) {
         if(!displayNone) return;
         const searchText = e.target.value;
         if(e.key === 'Enter'){
-            router.push(`/search?q=${searchText}`)
+            router.push(`/search?q=${searchText}`);
+            dispatch(setDisplay(!displayNone));
         }
     }
 
@@ -33,9 +34,6 @@ function SearchBarComponent({displayNone}) {
                 autoFocus
                 onKeyDown={enterDown}
             />
-            <div className="absolute top-[8px] right-0 w-7 h-7 bg-transparent rounded-full opacity-50 cursor-pointer" onClick={() => {dispatch(setDisplay(!displayNone))}}>
-                <X width={18} height={18} color="white"/>
-            </div>
         </div>
     );
 }
