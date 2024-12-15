@@ -1,19 +1,26 @@
 export default function UserGrade(){
+    enum Grade{
+        Beginner = '초보',
+        Middle = '중수',
+        Higher = '고수',
+        Master = '마스터',
+    }
+
     const grade = [
         {
-            text: '초보',
+            text: Grade.Beginner,
             color: '#fca5a5'
         },
         {
-            text: '중수',
+            text: Grade.Middle,
             color: '#86efac'
         },
         {
-            text: '고수',
+            text: Grade.Higher,
             color: '#93c5fd'
         },
         {
-            text: '마스터',
+            text: Grade.Master,
             color: '#d8b4fe'
         },
     ];
