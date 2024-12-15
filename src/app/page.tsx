@@ -1,11 +1,10 @@
 import CalendarComponent from '@/components/main/section/calendar-section/Calendar-component';
 import GoalComponent from '@/components/main/section/goal-section/GoalComponent';
 import AnnounceComponent from '@/components/main/section/announce-section/AnnounceComponent';
-import CommunityComponent from '@/components/main/section/community-section/CommunityComponent';
 import NoticeComponent from '@/components/main/section/notice-section/NoticeComponent';
 import StudyComponent from '../components/main/section/study-section/StudyComponent';
-import TestComponent from '../components/main/section/test-section/TestComponent';
 import ChartComponent from '../components/main/section/chart-section/ChartComponent';
+import TestAndPra from '../components/main/section/testANDpra/TestAndPra';
 
 export default function Home() {
     return (
@@ -31,8 +30,8 @@ export default function Home() {
                 <section className="study-section aspect-video rounded-xl bg-muted/50">
                     <StudyComponent/>
                 </section>
-                <section className="test-section aspect-video rounded-xl bg-muted/50">
-                    <TestComponent/>
+                <section className="testNPra-section aspect-video rounded-xl bg-muted/50">
+                    <TestAndPra/>
                 </section>
             </div>
         </div>

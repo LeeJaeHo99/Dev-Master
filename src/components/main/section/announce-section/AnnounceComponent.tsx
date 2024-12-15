@@ -11,7 +11,7 @@ import {
     TableRow,
 } from "@/components/ui/shadcn/table";
 
-const showAnnounceData = mockAnnounceData.slice(-4).reverse();
+const showAnnounceData = mockAnnounceData.slice(-5).reverse();
 
 function MainAnnouncTable() {
     return (
