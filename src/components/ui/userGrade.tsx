@@ -25,7 +25,7 @@ export default function UserGrade(){
         },
     ];
     return(
-        <div className={`user-grade p-1 px-2 rounded-sm text-xs font-semibold text-white`} style={{backgroundColor: `${grade[3].color}`}}>
+        <div className="user-grade p-1 px-2 rounded-sm text-xs font-semibold text-white cursor-pointer" style={{backgroundColor: `${grade[3].color}`}}>
             {grade[3].text}
         </div>
     );

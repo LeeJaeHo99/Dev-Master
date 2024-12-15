@@ -101,6 +101,17 @@ let displayNone = createSlice({
 });
 export let { setDisplay } = displayNone.actions;
 
+let searchText = createSlice({
+    name: 'searchText',
+    initialState: '',
+    reducers: {
+        setSearchText(state, action){
+            return action.payload;
+        }
+    }
+});
+export let { setSearchText } = displayNone.actions;
+
 export default configureStore({
     reducer: {
         items: items.reducer,
@@ -112,5 +123,6 @@ export default configureStore({
         width: width.reducer,
         height: height.reducer,
         displayNone: displayNone.reducer,
+        searchText: searchText.reducer,
     }
 });
