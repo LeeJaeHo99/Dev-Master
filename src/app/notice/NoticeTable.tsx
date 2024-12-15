@@ -1,4 +1,5 @@
 import { mockTableData } from '../../mock/mock';
+import Link from 'next/link';
 import {
     Table,
     TableBody,
