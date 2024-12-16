@@ -12,8 +12,6 @@ import {
 } from "@/components/ui/shadcn/table";
 
 const mainTableData = mockTableData.slice(-3).reverse();
-console.log('mainTableData: ', mainTableData);
-
 function NoticeComponentTable(){
     return(
         <Table className="mt-1">
