@@ -10,7 +10,12 @@ import {
     TableRow,
 } from "@/components/ui/shadcn/table";
 
-export default function NoticeTable() {
+export default async function NoticeTable() {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/notice`);
+    const result = await response.json();
+    const noticeData = result.data;
+    console.log('noticeData: ', noticeData);
+
     return (
         <Table className="mt-20">
             <TableCaption></TableCaption>
