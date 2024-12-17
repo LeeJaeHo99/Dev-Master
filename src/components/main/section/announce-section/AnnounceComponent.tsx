@@ -1,6 +1,5 @@
 import Link from "next/link";
 import ViewMoreBtn from '../../../ui/ViewMoreBtn';
-import { mockAnnounceData } from "../../../../mock/mock";
 import {
     Table,
     TableBody,
@@ -11,9 +10,17 @@ import {
     TableRow,
 } from "@/components/ui/shadcn/table";
 
-const showAnnounceData = mockAnnounceData.slice(-5).reverse();
+type announceDataType = {
+    [key: string] : string;
+}
 
-function MainAnnouncTable() {
+async function MainAnnouncTable() {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/announce`);
+    const result = await response.json();
+    const announceData = result.data;
+    const showAnnounceData = announceData.slice(-5).reverse();
+    console.log('showAnnounceData: ', showAnnounceData);
+
     return (
         <Table className="mt-4">
             <TableCaption></TableCaption>
@@ -25,14 +32,14 @@ function MainAnnouncTable() {
                 </TableRow>
             </TableHeader>
             <TableBody>
-                {showAnnounceData.map((data, i) => {
+                {showAnnounceData.map((data: announceDataType) => {
                     return (
-                        <TableRow className="h-12" key={i}>
+                        <TableRow className="h-12" key={data._id}>
                             <TableCell className="company-name--announce">{data.company}</TableCell>
                             <TableCell>
-                                <Link href={"/"}>{data.text}</Link>
+                                <Link href={"/"}>{data.content}</Link>
                             </TableCell>
-                            <TableCell className="">{data.date}</TableCell>
+                            <TableCell className="">{data.endDate}</TableCell>
                         </TableRow>
                     );
                 })}
