@@ -1,4 +1,3 @@
-import { mockTableData } from '../../mock/mock';
 import Link from 'next/link';
 import {
     Table,
@@ -9,6 +8,10 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/shadcn/table";
+
+type NoticeType = {
+    [key: string] : string;
+}
 
 export default async function NoticeTable() {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/notice`);
@@ -29,18 +32,18 @@ export default async function NoticeTable() {
                 </TableRow>
             </TableHeader>
             <TableBody>
-                {mockTableData.map((data, i) => {
+                {noticeData.map((data: NoticeType, i: number) => {
                     return (
-                        <TableRow className="h-12" key={i}>
+                        <TableRow className="h-12" key={data._id}>
                             <TableCell className="w-[80px] font-medium text-center">{i + 1}</TableCell>
                             <TableCell className="w-[80px] text-center">{data.sort}</TableCell>
                             <TableCell>
                                 <Link href={'/'}>
-                                    {data.title}
+                                    {data.content}
                                 </Link>
                             </TableCell>
                             <TableCell className="text-right">{data.date}</TableCell>
-                            <TableCell className="text-right">{data.writer}</TableCell>
+                            <TableCell className="text-right">{data.author}</TableCell>
                         </TableRow>
                     );
                 })}

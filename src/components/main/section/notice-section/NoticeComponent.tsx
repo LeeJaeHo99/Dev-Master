@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import ViewMoreBtn from '../../../ui/ViewMoreBtn';
-import { mockTableData } from '../../../../mock/mock';
 import {
     Table,
     TableBody,
@@ -11,8 +10,17 @@ import {
     TableRow,
 } from "@/components/ui/shadcn/table";
 
-const mainTableData = mockTableData.slice(-3).reverse();
-function NoticeComponentTable(){
+
+type NoticeType = {
+    [key: string] : string;
+}
+
+async function NoticeComponentTable(){
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/notice`);
+    const result = await response.json();
+    const noticeData = result.data;
+    const mainTableData = noticeData.slice(-3).reverse();
+
     return(
         <Table className="mt-1">
             <TableCaption></TableCaption>
@@ -24,13 +32,13 @@ function NoticeComponentTable(){
                 </TableRow>
             </TableHeader>
             <TableBody>
-                {mainTableData.map((data, i) => {
+                {mainTableData.map((data: NoticeType) => {
                     return (
-                        <TableRow className="h-12" key={i}>
-                            <TableCell className="">{data.writer}</TableCell>
+                        <TableRow className="h-12" key={data._id}>
+                            <TableCell className="">{data.author}</TableCell>
                             <TableCell>
                                 <Link href={'/'}>
-                                    {data.title}
+                                    {data.content}
                                 </Link>
                             </TableCell>
                             <TableCell className="">{data.date}</TableCell>
